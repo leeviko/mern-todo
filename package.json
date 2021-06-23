@@ -1,0 +1,21 @@
+{
+  "name": "mern_todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "Leevi Kotilainen",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "concurrently": "^6.2.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.14"
+  }
+}
