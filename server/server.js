@@ -13,6 +13,8 @@ app.use("/api/items", items);
 // Connect to database
 connectDB();
 
+app.get('/', (req, res) => { res.send('Hello from Express!')}
+
 if(process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 
