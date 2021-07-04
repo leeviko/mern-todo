@@ -1,0 +1,11 @@
+[[redirects]]
+  from = "/api/items"
+  to = "https://mern-todoapp-backend.herokuapp.com/api/items"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/items/:id"
+  to = "https://mern-todoapp-backend.herokuapp.com/api/items/:id"
+  status = 200
+  force = true
