@@ -1,5 +1,5 @@
-/api/items    https://mern-todoapp-backend.herokuapp.com/api/items
-/api/users    https://mern-todoapp-backend.herokuapp.com/api/users
+/api/items    https://mern-todoapp-backend.herokuapp.com/api/items/
+/api/users    https://mern-todoapp-backend.herokuapp.com/api/users/
 
 /api/items/:id  https://mern-todoapp-backend.herokuapp.com/api/items/:id
 /api/users/:id  https://mern-todoapp-backend.herokuapp.com/api/users/:id
