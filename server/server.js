@@ -6,9 +6,7 @@ const items = require("./routes/api/items");
 
 const app = express();
 
-app.use(cors({
-  origin: 'https://mern-todoapp.netlify.app/'
-}));
+app.use(cors());
 
 app.use(express.json());
 
