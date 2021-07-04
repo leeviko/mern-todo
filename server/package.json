@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "server": "nodemon server/server.js",
+    "server": "nodemon server.js",
     "client": "npm start --prefix client"
   },
   "author": "Leevi Kotilainen",
