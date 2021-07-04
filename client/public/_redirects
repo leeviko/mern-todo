@@ -1,1 +1,5 @@
-/api/items/*  https://mern-todoapp-backend.herokuapp.com/api/items
+/api/items    https://mern-todoapp-backend.herokuapp.com/api/items
+/api/users    https://mern-todoapp-backend.herokuapp.com/api/users
+
+/api/items/*  https://mern-todoapp-backend.herokuapp.com/api/items/:splat
+/api/users/*  https://mern-todoapp-backend.herokuapp.com/api/users/:splat
