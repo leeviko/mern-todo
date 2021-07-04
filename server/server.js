@@ -1,10 +1,14 @@
 const express = require("express");
 const connectDB = require("./config/db");
-const path = require("path");
+const cors = require("cors");
 
 const items = require("./routes/api/items");
 
 const app = express();
+
+app.use(cors({
+  origin: 'https://mern-todoapp.netlify.app/'
+}));
 
 app.use(express.json());
 
