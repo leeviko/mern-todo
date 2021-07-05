@@ -14,7 +14,7 @@ app.use(cors());
 
 app.use(express.json());
 
-// Use router
+// Use routes
 app.use("/api/items", items);
 app.use("/api/auth", auth);
 app.use("/api/users", users);
