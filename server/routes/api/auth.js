@@ -2,6 +2,7 @@ const express = require("express");
 const bcrypt = require("bcrypt");
 const router = express.Router();
 const jwt = require("jsonwebtoken");
+const auth = require("../../middleware/auth");
 
 // User model
 const User = require("../../models/User");
@@ -24,7 +25,7 @@ router.post("/", (req,res) => {
   // Check if user exists
   User.findOne({ email })
     .then(user => {
-      if(!user) return res.status(400).json({ msg: "User does not exists" });
+      if(!user) return res.status(400).json({ msg: "User does not exist" });
 
       // Validate password
       bcrypt.compare(password, user.password)
@@ -52,5 +53,18 @@ router.post("/", (req,res) => {
 
     })
 }) 
+
+
+/** 
+ * @route  GET api/auth/user
+ * @desc   Get user data
+ * @access Private
+*/
+router.get("/user", auth, (req, res) => {
+  User.findById(req.user.id)
+    .select("-password")
+    .then(user => res.json(user))
+})
+
 
 module.exports = router;
