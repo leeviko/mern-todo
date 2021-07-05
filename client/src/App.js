@@ -1,8 +1,13 @@
+import React, { useEffect } from "react";
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
+
+import { useDispatch } from "react-redux";
+
+import { loadUser } from "./actions/authActions";
 
 import './App.css';
 
@@ -11,7 +16,13 @@ import Todos from "./components/Todos";
 import About from "./components/About";
 
 
-function App() {
+
+const  App = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(loadUser());
+  }, [dispatch]) 
+
   return (
     <Router>
       <div className="App">
