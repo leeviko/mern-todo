@@ -24,7 +24,7 @@ export default (state = initialState, action) => {
         items: [action.payload, ...state.items]
       };
     case COMPLETE_ITEM:
-      const index = state.items.findIndex((item) => item._id == action.payload.id)
+      const index = state.items.findIndex((item) => item._id === action.payload.id)
 
       return {
         ...state,

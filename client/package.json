@@ -23,7 +23,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://mern-todoapp-backend.herokuapp.com",
+  "proxy": "localhost:5000",
   "eslintConfig": {
     "extends": [
       "react-app",

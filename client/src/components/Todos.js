@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { getItems, deleteItem, completeItem } from "../actions/itemActions";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -11,7 +11,7 @@ const Todos = () => {
 
   useEffect(() => {
     dispatch(getItems());
-  }, [])
+  }, [dispatch])
 
   const onDelete = (id) => {
     dispatch(deleteItem(id));
